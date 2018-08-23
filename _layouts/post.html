@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<!-- Content -->
+<section>
+
+                {% if page.next %} 
+                <a href="{{ page.next.url }}" class="button">NEXT</a>
+                {% else %}
+                <span class="button disabled">NEXT</span>              
+                {% endif %}
+                {% if page.previous %} 
+                <a href="{{ page.previous.url }}" class="button" style="float:right;">PREV</a>
+                {% else %}
+                <span class="button disabled" style="float:right;">PREV</span>
+                {% endif %}
+
+
+        
+        <header class="main">
+            <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
+            <h1>{{ page.title }}</h1>
+            {{ page.short_desc }}
+        </header>
+
+        <span class="image main"><img src="/images/pic11.jpg" alt="" /></span>
+
+        {{ content }}
+
+        <hr class="major" />
+
+        {% if page.next %} 
+        <a href="{{ page.next.url }}" class="button">NEXT</a>
+        {% else %}
+        <span class="button disabled">NEXT</span>              
+        {% endif %}
+        {% if page.previous %} 
+        <a href="{{ page.previous.url }}" class="button" style="float:right;">PREV</a>
+        {% else %}
+        <span class="button disabled" style="float:right;">PREV</span>
+        {% endif %}
+
+
+    </section>

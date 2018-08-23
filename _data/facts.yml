@@ -1,0 +1,19 @@
+- fact: Portitor ullamcorper
+  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+  fa-icon: fa-diamond
+
+- fact: Sapien veroeros
+  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+  fa-icon: fa-paper-plane
+
+- fact: Quam lorem ipsum
+  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+  fa-icon: fa-rocket
+
+- fact: Sed magna finibus
+  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+  fa-icon: fa-signal
+
+- fact: Fifth
+  desc: Just test.
+  fa-icon: fa-twitter

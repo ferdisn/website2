@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{{content}}
+
+<!-- Section -->
+<section>
+        <header class="major">
+            <h2>Some facts about me</h2>
+        </header>
+        <div class="features">
+                {% for fact in site.data.facts %}
+                <article>
+                        <span class="icon {{ fact.fa-icon }}"></span>
+                        <div class="content">
+                            <h3>{{ fact.fact }}</h3>
+                            <p>{{ fact.desc }}</p>
+                        </div>
+                    </article>
+                {% endfor %}
+        </div>
+    </section>
+
+<!-- Section -->
+    <section>
+        <header class="major">
+            <h2>Recent posts</h2>
+        </header>
+        <div class="posts">
+                {% for post in site.posts limit:6 %}
+                <article>
+                        <a href="#" class="image"><img src="/images/pic01.jpg" alt="" /></a>
+                        <h3>{{ post.title }}</h3>
+                        {{ post.excerpt }}
+                        <ul class="actions">
+                            <li><a href="{{ post.url }}" class="button">Read more...</a></li>
+                        </ul>
+                    </article>
+                {% endfor %}
+        </div>
+    </section>
+

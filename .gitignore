@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.jekyll-metadata
+.bundle
+images
+assets/sass
