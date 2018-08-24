@@ -1,19 +1,19 @@
-- fact: Portitor ullamcorper
-  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  fa-icon: fa-diamond
+- fact: Education
+  desc: Some accounting, some IT. Still have strong accounting concepts, and have interest in economics and related topics.
+  fa-icon: fa-graduation-cap
 
-- fact: Sapien veroeros
-  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  fa-icon: fa-paper-plane
+- fact: Work History
+  desc: Programmer for .NET C#, HR Officer (especially compensation and benefit) for some time, and briefly employed in capital market infrastructure provider.
+  fa-icon: fa-briefcase
 
-- fact: Quam lorem ipsum
-  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  fa-icon: fa-rocket
+- fact: Word-throwing game
+  desc: jekyll, laravel, postfix, gsuite, centos, digitalocean, dns, cloudflare, let's encrypt, postgresql, mariadb, fedora, visual studio code, intellij idea, github, excel, toad, sqldeveloper, xshell, virtualbox, inkscape, gimp, scribus, network, ssh.
+  fa-icon: fa-list-alt
 
-- fact: Sed magna finibus
-  desc: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-  fa-icon: fa-signal
+- fact: Another word-throwing game
+  desc: human resources, human capital, accounting cycle, financial report, personal income tax.
+  fa-icon: fa-list
 
-- fact: Fifth
-  desc: Just test.
-  fa-icon: fa-twitter
+- fact: Languages
+  desc: Indonesian,<br>English (US),<br>German.
+  fa-icon: fa-language
