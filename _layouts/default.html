@@ -124,9 +124,15 @@
 								<p>Hi, I'm active on Twitter, and you can mention me there. But if you prefer email, see below.</p>
 								<ul class="contact">
 									<li class="fa-envelope-o"><a>{{ site.email }}</a></li>
-									<!-- <li class="fa-phone">(000) 000-0000</li> -->
+									{% if site.twitter_username %} 
+									<li class="fa-twitter"><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">@{{ site.twitter_username }}</a></li>
+									{% endif %}
+									{% if site.github_username %}
+									<li class="fa-github"><a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a></li>
+									{% endif %}
 									<li class="fa-home">Bali - Jakarta<br />
-									Indonesia</li>
+										Indonesia</li>
+									<!-- <li class="fa-phone">(000) 000-0000</li> -->
 								</ul>
 							</section>
 
