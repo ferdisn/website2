@@ -498,7 +498,7 @@ Halaman ini untuk eksperimen *timeline*. Kode di*curi* dari [sini](https://codep
 
         <div class="cd-timeline-content">
             <h2>Entered IT Dev</h2>
-            <p>Got a job in company that maintain capital market infrastructure. Work here as a dev officer, but actually more like a project management job. Tasting the first HP-UX, which was going to be obsoleted [CMIIW if that's not a word] with... RHEL.</p>
+            <p>Got a job in company that maintain capital market infrastructure. Worked here as a dev officer, but actually was more like a project management job. Tasted the first HP-UX, which was going to be obsoleted [CMIIW if that's not a word] with... RHEL.</p>
             <!-- <a href="#0" class="cd-read-more">Read more</a> -->
             <span class="cd-date">2015</span>
         </div> <!-- cd-timeline-content -->
@@ -511,7 +511,7 @@ Halaman ini untuk eksperimen *timeline*. Kode di*curi* dari [sini](https://codep
 
         <div class="cd-timeline-content">
             <h2>Exited IT Dev, Entered Campus Life</h2>
-            <p>Focused on my German lesson, take part time job as campus computer administrator.</p>
+            <p>Focused on my German lesson, took part time job as campus computer administrator.</p>
             <!-- <a href="#0" class="cd-read-more">Read more</a> -->
             <span class="cd-date">2016</span>
         </div> <!-- cd-timeline-content -->
