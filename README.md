@@ -3,3 +3,6 @@
 
 To run local web server, run this command:
 `$ bundle exec jekyll serve --config _config.yml,_config.local.yml`
+
+To build the site for others to review (upload to DigitalOcean), run this command:
+`$ bundle exec jekyll build --config _config.yml,_config.test.yml`
