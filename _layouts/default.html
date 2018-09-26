@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 		<link rel="stylesheet" href="/assets/css/main.css" />
-		<link rel="stylesheet" href="/assets/css/pastie.css" />
+		<!-- <link rel="stylesheet" href="/assets/css/pastie.css" /> -->
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
         <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
@@ -77,6 +77,12 @@
 											<li><a href="/resources/resources.html">Resources</a></li>
 											<li><a href="/resources/reference-apps.html">Reference Apps</a></li>
 											<li><a href="/resources/cost-free-resources.html">Cost Free Resources</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">About</span>
+										<ul>
+											<li><a href="/about/timeline.html">Timeline</a></li>
 										</ul>
 									</li>
 									<li><a href="/posts.html">Blog</a></li>
