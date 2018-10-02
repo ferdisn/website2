@@ -19,7 +19,16 @@ title: "List of posts"
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
-  <li><a href="/tags/{{t | downcase | replace:' ','-' }}.html">{{t | downcase | replace:" ","-" }}</a> has {{ posts | size }} posts</li>
+  <li>
+  <a href="/tags/{{t | downcase | replace:' ','-' }}.html">{{t | downcase | replace:" ","-" }}</a> has {{ posts | size }} posts
+  <ul class="alt">
+      {% for post in posts %}
+      <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+  </ul>
+  </li>
 {% endfor %}
 </ul>
 
