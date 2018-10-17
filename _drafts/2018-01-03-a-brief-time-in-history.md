@@ -60,3 +60,4 @@ Telat sekitar sepuluh menit, jadi harus naik kereta berikutnya. Sampai di Skytra
 
 Perjalanan pulang, again, tidur, makan sedikit kue sus, minum air walau pun kurang, dan sampai di DPS saya mencoba *hail a Go-Car* yang pada percobaan pertama gagal karena pengemudinya minta tambah argo. Sampai di kos, yang bisa dilakukan hanya tidur, karena besok sudah kembali bekerja.
 
+trigger from other branch
