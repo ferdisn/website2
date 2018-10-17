@@ -1,5 +1,5 @@
 ---
-title:  "Membuat instalasi Wordpress lokal dan remote dan sinkronisasinya"
+title:  "Membuat instalasi Wordpress lokal dan <em>remote</em> serta sinkronisasinya"
 date:   2017-12-23 00:00:00 +0700
 short_desc : '<p>Cadangan<br>energi</p>' 
 tags:
@@ -8,18 +8,18 @@ tags:
 excerpt: This is an excerpt
 ---
 ### Pengantar ~~Tidur~~
-Situasinya sebagai berikut: Anda punya laptop dan juga punya server di jagat maya, lalu Anda ingin membuat instalasi Wordpress di lokal dan di server tersebut, juga ingin melakukan sinkronisasinya. (Atau cuma saya saja yang mau begini, tidak ada yang tahu).
+Situasinya sebagai berikut: Anda punya laptop dan juga punya *server* di jagat maya, lalu Anda ingin membuat instalasi Wordpress di lokal dan di server tersebut, juga ingin melakukan sinkronisasinya. (Atau cuma saya saja yang mau begini, tidak ada yang tahu).
 
 Kelebihannya kalau begini, Anda bisa *ngeblog* sepuas-puasnya dengan kuota 0 Byte. Nanti kalau *blog* sudah dalam keadaan yang Anda inginkan, tinggal jalankan *script* sinkronisasi yang dijelaskan di sini. Kuota ke internet yang Anda pakai untuk mengirim data jadi lebih efisien karena proses penyuntingan yang berkali-kali dilakukan secara lokal. Anda pun bisa memanfaatkan seluruh fasilitas Wordpress secara lengkap.
 
-Walaupun agak salah kaprah, saya menganggap ini juga sebagai metode *backup*. Kapan pun *server* di jagat maya lenyap, saya punya perubahan terkini di laptop saya. Kalau laptop dijambret (amit-amit) masih ada salinan di jagat maya. Kalau dua-duanya terjadi? *Apes bener.* Jalankan metode sinkronisasi yang disesuaikan agar menyimpan berkas sql dan berkas file Wordpress ke dalam *tarball* lalu dikirim lewat email ke mailbox yang menurut Anda ukurannya besar. [note]Next homework.[/note]
+Walaupun agak salah kaprah, saya menganggap ini juga sebagai metode *backup*. Kapan pun *server* di jagat maya lenyap, saya punya perubahan terkini di laptop saya. Kalau laptop dijambret, (amit-amit!) masih ada salinan di jagat maya. Kalau dua-duanya terjadi? *Apes bener.* Jalankan metode sinkronisasi yang disesuaikan agar menyimpan berkas sql dan berkas file Wordpress ke dalam *tarball* lalu dikirim lewat email ke mailbox yang menurut Anda ukurannya besar. <sup>Next homework.</sup>
 
 ## Asumsi
 * Fedora (laptop) dan CentOS server.
 * Nginx
 * PHP-FPM
 * MariaDB
-* php-mysqli extension to PHP `# dnf install php-mysqli`
+* php-mysqli *extension* untuk PHP `# dnf install php-mysqli`
 
 ## Langkah
 Perangkat lunak di bagian Asumsi sudah terpasang, terkonfigurasi.
@@ -27,7 +27,7 @@ Perangkat lunak di bagian Asumsi sudah terpasang, terkonfigurasi.
 ### 1. Membuat Direktori, Pengaturan Hak Akses, Pengaturan SELinux
 Siapkan direktori webapp sebagai penampung semua berkas web. Lalu di bawah webapp, buat folder per user Linux menurut pool PHP-FPM yang disiapkan. Di bawah folder itu, ada tiga folder, yaitu `files`, `logs`, `php-fpm-session`.
 
-Direktorinya akan jadi seperti ini: (pertimbangkan keluarkan ini ke artikel tersendiri)
+Direktorinya akan jadi seperti ini: <sup>(pertimbangkan keluarkan ini ke artikel tersendiri)</sup>
 ```
 /var/webapp                       -> all webapp
 /var/webapp/ferdi                 -> per user php-fpm pool
