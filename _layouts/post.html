@@ -23,7 +23,11 @@ layout: default
             {{ page.short_desc }}
         </header>
 
+        {% if page.header_image %}
+        <span class="image main"><img src="{{ site.asseturl }}/{{ page.header_image }}" alt="" /></span>
+        {% else %}
         <span class="image main"><img src="/images/pic11.jpg" alt="" /></span>
+        {% endif %}
 
         {{ content }}
 

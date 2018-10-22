@@ -115,7 +115,13 @@
 								<div class="mini-posts">
 										{% for post in site.posts limit:6 %}
 										<article>
-												<a href="{{ post.url }}" class="image"><img src="/images/pic07.jpg" alt="" /></a>
+												<a href="{{ post.url }}" class="image">
+														{% if post.header_image %}
+														<img src="{{ site.asseturl }}/{{ post.header_image }}" alt="" />
+														{% else %}
+														<img src="/images/pic07.jpg" alt="" />
+														{% endif %}
+												</a>
 												<p><a href="{{ post.url }}" class="image">{{ post.title }}</a></p>
 										</article>
 										{% endfor %}

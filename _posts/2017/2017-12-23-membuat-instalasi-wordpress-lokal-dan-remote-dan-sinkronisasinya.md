@@ -6,6 +6,7 @@ tags:
 - administration
 - wordpress
 excerpt: This is an excerpt
+header_image: www/wordpress/blogging-blur-business-261662.jpg
 ---
 ### Pengantar ~~Tidur~~
 Situasinya sebagai berikut: Anda punya laptop dan juga punya *server* di jagat maya, lalu Anda ingin membuat instalasi Wordpress di lokal dan di server tersebut, juga ingin melakukan sinkronisasinya. (Atau cuma saya saja yang mau begini, tidak ada yang tahu).

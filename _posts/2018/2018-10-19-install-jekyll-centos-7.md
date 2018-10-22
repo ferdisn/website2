@@ -8,6 +8,7 @@ tag:
  - centos7
  - administration
  - learn
+header_image: www/jekyll/jekyll.svg
 ---
 
 Jekyll adalah *static site generator* alias mesin cetak untuk situs. Situs Anda sebenarnya HTML statis, tapi ada program yang membantu mencetaknya, alih-alih menyusun kode HTML secara manual. Jekyll ditulis dengan bahasa Ruby, sayangnya versi Ruby yang ada di repo CentOS 7 jauh di bawah persyaratan minimum Jekyll. Ini adalah catatan langkah pemasangan Ruby di CentOS 7 dengan cara di luar manajemen paket resmi CentOS 7.
