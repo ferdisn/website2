@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 		<link rel="stylesheet" href="/assets/css/main.css" />
-		<!-- <link rel="stylesheet" href="/assets/css/pastie.css" /> -->
+		<link rel="stylesheet" href="/assets/css/pastie.css" />
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
         <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
@@ -74,6 +74,7 @@
 									<li>
 										<span class="opener">Resources</span>
 										<ul>
+											<li><a href="/resources/links.html">Links / Blogroll</a></li>
 											<li><a href="/resources/resources.html">Resources</a></li>
 											<li><a href="/resources/reference-apps.html">Reference Apps</a></li>
 											<li><a href="/resources/cost-free-resources.html">Cost Free Resources</a></li>
@@ -82,6 +83,7 @@
 									<li>
 										<span class="opener">About</span>
 										<ul>
+											<li><a href="/about/language.html">Language</a></li>
 											<li><a href="/about/timeline.html">Timeline</a></li>
 										</ul>
 									</li>
@@ -99,7 +101,8 @@
 									{% for tag in site.tags %}
 										{% assign t = tag | first %}
 										{% assign posts = tag | last %}
-										<a class="button" href="/tags/{{t | downcase | replace:" ","-" }}.html">{{t | downcase | replace:" ","-" }}</a>
+										<span>{{t | downcase | replace:" ","-" }}</span>
+										<!-- <a class="button" href="/tags/{{t | downcase | replace:" ","-" }}.html">{{t | downcase | replace:" ","-" }}</a> -->
 									{% endfor %}
 								</p>
 							</section>
