@@ -88,6 +88,7 @@ $ rm wordpress
 Lalu buka browser Anda.
 
 <img class="image" src="{{ site.asseturl }}/foto_resume-1.png" alt="" width="100%" height="100%">
+<!-- ![alt text]({{ site.asseturl }}/foto_resume-1.png "Logo Title Text 1") -->
 
 Selesaikan instalasi Wordpress.
 
