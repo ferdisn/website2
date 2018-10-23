@@ -1,27 +1,30 @@
 ---
-title:  "Instalasi MariaDB"
+title:  "Pemasangan MariaDB"
 date:   2017-12-23 12:13:00 +0700
-short_desc : '<p>Migrated data</p>'
+short_desc : '<p>Things get lost here</p>'
 image: 
 tag:
  - administration
  - mariadb
+ - centos7
 ---
 
 ### Persyaratan:
-Fedora 26 / CentOS 7
-Sambungan internet
+* Fedora 26 / CentOS 7
+* Sambungan internet
 
 
-### Langkah:
-Pasang!
+### Langkah
+**Pasang!!!**
+
 `# dnf install mariadb-server`
-Apabila belum ada dnf, silakan gunakan  yum.
 
-### Konfigurasi Utama!
+Apabila belum ada dnf, silakan gunakan yum.
+
+### Konfigurasi Utama
 Tidak ada berkas untuk disunting, kecuali Anda mau mengatur replikasi.
 
-Nyalakan dulu daemon mariadb dengan `# systemctl start mariadb`.
+Nyalakan dulu *daemon* mariadb dengan `# systemctl start mariadb`.
 
 Jalankan perintah `mysql_secure_installation` sebagai root.
 ```
@@ -85,9 +88,9 @@ installation should now be secure.
 
 Thanks for using MariaDB!
 ```
-Script ini saya jalankan untuk kedua kalinya (kalau tidak, artikel ini tidak akan bisa naik, :D. Nanti akan saya sempatkan coba pasang baru untuk contoh di halaman ini.) Script ini hanya untuk hardening standar saja, namun sangat bermanfaat, paling tidak agar root mariadb jadi berpassword.
+*Script* ini saya jalankan untuk kedua kalinya (kalau tidak, artikel ini tidak akan bisa naik, :D. Nanti akan saya sempatkan coba pasang baru untuk contoh di halaman ini.) *Script* ini hanya untuk *hardening* standar saja, namun sangat bermanfaat, paling tidak agar root mariadb jadi ber*password*.
 
-Pengoperasian! (Menambahkan database dan user)
+Pengoperasian! (Menambahkan *database* dan *user*)
 
 ```mysql
 $ mysql -u root -p
@@ -111,6 +114,6 @@ Bye
 $
 ```
 
-Yang ditebalkan itu adalah yang harus Anda ganti. Kalau biasanya untuk environment laptop saya, saya buat satu string yang sama persis semua. Sangat tidak aman sih, hahahaha.
+DBName, DBUser, dan DBPassword itu yang harus Anda ganti. Kalau biasanya untuk environment laptop saya, saya buat satu string yang sama persis semua. Sangat tidak aman sih, hahahaha.
 
-Tidak perlu restart service setelah menambahkan database atau user.
+Tidak perlu *restart service* setelah menambahkan *database* atau *user*.

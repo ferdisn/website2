@@ -1,28 +1,32 @@
 ---
-title:  "Instalasi Nginx"
+title:  "Pemasangan Nginx"
 date:   2017-12-23 12:13:00 +0700
-short_desc : '<p>Migrated data</p>'
+short_desc : '<p>I can show you the world wide web</p>'
 image: 
 tag:
  - administration
  - nginx
+ - centos7
 ---
 
 ### Persyaratan:
-* Fedora 26 / CentOS 7 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7[/note]
+* Fedora 26 / CentOS 7 <https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7>
 * Sambungan internet
 
 
 ### Langkah:
-Pasang!
+**Pasang!!!**
+
 `# dnf install nginx`
 
-Apabila belum ada dnf, silakan gunakan  yum. Apabila pakai Yum, sepertinya Anda di distro turunan RHEL. Ikuti panduan di sini untuk konfigurasi repo EPEL.
+Apabila belum ada dnf, silakan gunakan  yum. Apabila pakai Yum, sepertinya Anda di *distro* turunan RHEL. Ikuti panduan di [sini](/2017/12/30/epel-configuration.html) untuk konfigurasi repo EPEL.
 
 ### Konfigurasi Utama!
 Sunting berkas konfigurasi `/etc/nginx/nginx.conf`.
 ```
-
+.
+.
+.
     include /etc/nginx/conf.d/*.conf;
 
 	client_max_body_size 999M;
@@ -55,17 +59,20 @@ Sunting berkas konfigurasi `/etc/nginx/nginx.conf`.
 #    server {
 #        listen       443 ssl http2 default_server;
 #        listen       [::]:443 ssl http2 default_server;
+.
+.
+.
 ```
-`client_max_body_size` berfungsi untuk memastikan Nginx tidak timeout ketika peramban mengirim file besar. Pengalaman waktu pakai Zimbra dulu, kalau lagi mau kirim lampiran, suka timeout. Namun, kalau ga perlu-perlu amat, silakan kecilkan angkanya jadi 5M.
+`client_max_body_size` berfungsi untuk memastikan Nginx tidak *timeout* ketika peramban mengirim berkas besar. Pengalaman waktu pakai Zimbra dulu, kalau lagi mau kirim lampiran, cenderung *timeout*. Namun, kalau *ga perlu-perlu amat*, silakan kecilkan angkanya jadi 5M.
 
-`include /etc/nginx/sites-enabled/*.nginx;` ini fungsinya agar Nginx membaca konfigurasi di folder `/etc/nginx/sites-enabled` yang berekstensi dotNGINX. Nanti seluruh stanza virtual host akan diletakkan di sini. Jadi, tidak perlu mengubah berkas utama nginx.conf secara langsung.
+`include /etc/nginx/sites-enabled/*.nginx;` ini fungsinya agar Nginx membaca konfigurasi di folder `/etc/nginx/sites-enabled` yang berekstensi dotNGINX. Nanti seluruh stanza *virtual host* akan diletakkan di sini. Jadi, tidak perlu mengubah berkas utama nginx.conf secara langsung.
 
-Sebagai tambahan, stanza server yang ada di atas akan membuat pengunjung yang hanya mengunjungi IP server Anda atau mengunjungi domain yang tidak valid menurut konfigurasi Nginx, akan disajikan halaman dari stanza ini. Silakan komentari dengan tanda pagar kalau tidak mau hal itu terjadi. Pilihan lainnya adalah membuat redirect dari HTTP ke HTTPS untuk semua kunjungan berbentuk domain. <sup>In time, I'll make it.</sup>
+Sebagai tambahan, stanza *server* yang ada di atas akan membuat pengunjung yang hanya mengunjungi IP *server* Anda atau mengunjungi domain yang tidak valid menurut konfigurasi Nginx, melihat halaman dari stanza ini. Silakan komentari dengan tanda pagar kalau tidak mau hal itu terjadi. Pilihan lainnya adalah membuat redirect dari HTTP ke HTTPS untuk semua kunjungan berbentuk domain. <sup>In time, I'll make it.</sup>
 
 Pengoperasian! (Penambahan dan penghapusan stanza)
-Setiap kali hendak membuat stanza baru, bebas mau menyusunnya seperti apa. Apakah dimasukkan ke satu file dotNGINX tunggal, atau per domain, atau per aplikasi. Saya belum maintain banyak, jadi masih cenderung per domain atau per kepemilikan.
+Setiap kali hendak membuat stanza baru, bebas mau menyusunnya seperti apa. Apakah dimasukkan ke satu file dotNGINX tunggal, atau per domain, atau per aplikasi. Saya belum *maintain* banyak, jadi masih cenderung per domain atau per kepemilikan.
 
-Contoh stanza dari file ferdi.nginx:
+Contoh stanza dari berkas ferdi.nginx:
 ```
 # stanza ini akan membuat akses menuju server_name di port 80
 # dialihkan ke server_name yang sama dengan protokol https
@@ -96,14 +103,17 @@ server {
 ## lokasi berkas situs yang akan disajikan
     root /var/webapp/ferdi/files/blog.ferdi.id;
 
+## berkas yang akan dicari pertama kali kalau di peramban tidak disebutkan secara spesifik
     index index.php index.html index.htm;
 
+## forwarder untuk PHP
 	location / {
 		try_files $uri $uri/ /index.php?$args;
 	}
 
     charset utf-8;
 
+## yang melempar pemrosesan ke PHP-FPM
 	location ~ ^(.+\.php)(.*)$ {
 		try_files $fastcgi_script_name =404;
 		#include        /etc/nginx/fastcgi_params;

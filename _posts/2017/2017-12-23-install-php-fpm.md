@@ -6,6 +6,7 @@ image:
 tag:
  - administration
  - php-fpm
+ - centos7
 ---
 
 ### Persyaratan:
